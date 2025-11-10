@@ -7,35 +7,31 @@ body {
   text-align: center;
 }
 
-/* HERO */
-.logo {
-  width: 180px;
-  height: auto;
-  margin-bottom: 15px;
+/* HERO SECTION */
+.hero {
+  padding: 80px 20px;
 }
 
-.hero {
-  padding: 60px 20px;
+.logo {
+  width: 320px;     /* mărime premium, lat și vizibil */
+  max-width: 80%;   /* ca să fie responsive pe telefon */
+  height: auto;
+  display: block;
+  margin: 0 auto 30px auto; /* centrare + spațiu dedesubt */
 }
 
 .hero h1 {
-  font-size: 46px;
+  font-size: 38px;   /* mai elegant, mai puțin agresiv */
   font-weight: 300;
-  margin: 10px 0;
+  margin-top: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .hero p {
   font-size: 18px;
-  color: #c7b37e;
-}
-
-/* ABOUT */
-.about {
-  max-width: 600px;
-  margin: 0 auto 50px auto;
-  padding: 0 20px;
-  font-size: 17px;
-  line-height: 1.6;
+  color: #d8c28a;
+  margin-top: 10px;
 }
 
 /* GALLERY */
