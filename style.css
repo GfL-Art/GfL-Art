@@ -1,42 +1,95 @@
 body {
-  background: #0d0d0d;
-  color: #d4b676;
-  font-family: 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
+  background: #000;
+  color: #d8c28a;
+  font-family: "Helvetica Neue", sans-serif;
   text-align: center;
 }
 
-.hero { padding: 80px 20px; }
-.hero h1 { font-size: 48px; margin: 10px 0; }
-.hero p { font-size: 18px; color: #c7b089; }
+/* HERO */
 .logo {
-  width: 120px; /* Mărime nouă mai mică */
+  width: 180px;
   height: auto;
-  margin-bottom: 20px;
-}
-.gallery { padding: 40px 20px; }
-.gallery h2 { font-size: 32px; margin-bottom: 40px; }
-
-.art { margin-bottom: 50px; }
-.art img { width: 80%; max-width: 600px; border: 2px solid #d4b676; }
-
-.placeholder {
-  border: 2px dashed #d4b676;
-  padding: 60px;
-  font-style: italic;
+  margin-bottom: 15px;
 }
 
-.contact { padding: 60px 20px; }
+.hero {
+  padding: 60px 20px;
+}
 
-.btn {
-  padding: 14px 28px;
-  border: 2px solid #d4b676;
+.hero h1 {
+  font-size: 46px;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #c7b37e;
+}
+
+/* ABOUT */
+.about {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 20px;
+}
+
+.gallery h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.art {
+  margin-bottom: 30px;
+}
+
+.art img {
+  width: 90%;
+  max-width: 420px;
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  transition: transform .4s ease;
+}
+
+.art img:hover {
+  transform: scale(1.04);
+}
+
+/* CONTACT */
+.contact {
+  padding: 40px 20px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  background: #d8c28a;
+  color: #000;
   text-decoration: none;
-  color: #d4b676;
-  font-size: 20px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s ease;
 }
-.btn:hover {
-  background: #d4b676;
-  color: #0d0d0d;
+
+.whatsapp-button:hover {
+  background: #fff1b6;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px 0;
+  font-size: 14px;
+  color: #7a6a45;
 }
