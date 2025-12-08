@@ -1,133 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>GfL Art – Handmade Artworks with 24k Gold Leaf</title>
-  <meta name="description" content="Unique handmade artworks with genuine 24k gold leaf. Florence, Italy.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>GfL Art – Handmade Artworks with 24k Gold Leaf</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #000;
-      color: #eee;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#000;
+  color:#ddd;
+}
 
-    header {
-      padding: 40px 20px 20px;
-    }
+header{
+  text-align:center;
+  padding:40px 20px;
+}
 
-    .logo {
-      max-width: 180px;
-      margin: 0 auto 30px;
-      display: block;
-    }
+.logo{
+  max-width:180px;
+  margin-bottom:20px;
+}
 
-    h1 {
-      font-size: 28px;
-      font-weight: normal;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
+h1{
+  font-weight:normal;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
 
-    h2 {
-      font-size: 14px;
-      font-weight: normal;
-      color: #aaa;
-      max-width: 600px;
-      margin: 0 auto 50px;
-      letter-spacing: 1px;
-    }
+h2{
+  font-size:14px;
+  color:#aaa;
+}
 
-    .gallery {
-      max-width: 1200px;
-      margin: 0 auto 80px;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+.gallery{
+  max-width:1200px;
+  margin:0 auto 80px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap:40px;
+}
 
-    .artwork img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid #222;
-    }
+.artwork img{
+  width:100%;
+  cursor:pointer;
+  border:1px solid #222;
+  transition:opacity .3s;
+}
 
-    .artwork p {
-      font-size: 13px;
-      color: #aaa;
-      margin-top: 10px;
-      letter-spacing: 0.5px;
-    }
+.artwork img:hover{ opacity:.85; }
 
-    footer {
-      padding: 30px 20px;
-      font-size: 13px;
-      color: #666;
-      border-top: 1px solid #111;
-    }
-  </style>
+.artwork h3{
+  font-size:16px;
+  margin:15px 0 8px;
+  letter-spacing:1px;
+}
+
+.artwork p{
+  font-size:13px;
+  color:#aaa;
+  line-height:1.5;
+}
+
+.price{
+  margin-top:8px;
+  font-size:14px;
+}
+
+.old{
+  text-decoration:line-through;
+  color:#777;
+  margin-right:8px;
+}
+
+.new{
+  color:#f5c26b;
+  font-weight:bold;
+}
+
+.contact{
+  text-align:center;
+  margin:30px 0 80px;
+}
+
+.contact a{
+  background:#25d366;
+  color:#000;
+  padding:14px 30px;
+  text-decoration:none;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+/* LIGHTBOX */
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.95);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+}
+
+.lightbox:target{ display:flex; }
+
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #111;
+  color:#666;
+  font-size:13px;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <img src="images/logo.png" alt="GfL Art logo" class="logo">
-    <h1>GfL ART</h1>
-    <h2>Handmade artworks with 24k gold leaf · Florence, Italy</h2>
-  </header>
+<header>
+  <img src="images/logo.png" class="logo" alt="GfL Art logo">
+  <h1>GfL ART</h1>
+  <h2>Handmade artworks with 24k gold leaf · Florence, Italy</h2>
+</header>
 
-  <main class="gallery">
+<main class="gallery">
 
-    <div class="artwork">
-      <img src="images/art1.jpg" alt="Handmade artwork with gold leaf">
-      <p>Artwork I · 24k Gold Leaf</p>
-    </div>
+<!-- ART 1 -->
+<div class="artwork">
+<a href="#img1"><img src="images/art1.jpg"></a>
+<h3>Art 1</h3>
+<p>Handmade artwork with subtle 24k gold leaf accents, balancing texture and light in a contemporary composition.</p>
+<div class="price"><span class="old">45 €</span><span class="new">30 €</span></div>
+</div>
 
-    <div class="artwork">
-      <img src="images/art2.jpg" alt="Unique handmade artwork">
-      <p>Artwork II · 24k Gold Leaf</p>
-    </div>
+<!-- ART 2 -->
+<div class="artwork">
+<a href="#img2"><img src="images/art2.jpg"></a>
+<h3>Art 2</h3>
+<p>Unique piece combining mixed techniques and 24k gold leaf, offering contrast, elegance and depth.</p>
+<div class="price"><span class="old">55 €</span><span class="new">35 €</span></div>
+</div>
 
-    <div class="artwork">
-      <img src="images/art3.jpg" alt="Gold leaf contemporary art">
-      <p>Artwork III · 24k Gold Leaf</p>
-    </div>
+<!-- ART 3 -->
+<div class="artwork">
+<a href="#img3"><img src="images/art3.jpg"></a>
+<h3>Art 3</h3>
+<p>Statement artwork with rich textures and 24k gold leaf, designed as a focal point in refined interiors.</p>
+<div class="price"><span class="old">100 €</span><span class="new">80 €</span></div>
+</div>
 
-    <div class="artwork">
-      <img src="images/art4.jpg" alt="Handcrafted gold leaf art">
-      <p>Artwork IV · 24k Gold Leaf</p>
-    </div>
+<!-- ART 4 -->
+<div class="artwork">
+<a href="#img4"><img src="images/art4.jpg"></a>
+<h3>Art 4</h3>
+<p>Harmonious handmade creation with discreet 24k gold leaf accents, calm and balanced in expression.</p>
+<div class="price"><span class="old">45 €</span><span class="new">30 €</span></div>
+</div>
 
-    <div class="artwork">
-      <img src="images/art5.jpg" alt="Modern artwork with gold leaf">
-      <p>Artwork V · 24k Gold Leaf</p>
-    </div>
+<!-- ART 5 -->
+<div class="artwork">
+<a href="#img5"><img src="images/art5.jpg"></a>
+<h3>Art 5</h3>
+<p>Modern handcrafted artwork featuring gold leaf textures that enhance sophistication and warmth.</p>
+<div class="price"><span class="old">45 €</span><span class="new">30 €</span></div>
+</div>
 
-    <div class="artwork">
-      <img src="images/art6.jpg" alt="Minimal gold leaf artwork">
-      <p>Artwork VI · 24k Gold Leaf</p>
-    </div>
+<!-- ART 6 -->
+<div class="artwork">
+<a href="#img6"><img src="images/art6.jpg"></a>
+<h3>Art 6</h3>
+<p>Abstract handmade piece using 24k gold leaf to create movement, depth and visual rhythm.</p>
+<div class="price"><span class="old">55 €</span><span class="new">35 €</span></div>
+</div>
 
-    <div class="artwork">
-      <img src="images/art7.jpg" alt="Abstract handmade gold art">
-      <p>Artwork VII · 24k Gold Leaf</p>
-    </div>
+<!-- ART 7 -->
+<div class="artwork">
+<a href="#img7"><img src="images/art7.jpg"></a>
+<h3>Art 7</h3>
+<p>Minimalist decorative artwork with delicate gold leaf details, refined and elegant.</p>
+<div class="price"><span class="old">35 €</span><span class="new">25 €</span></div>
+</div>
 
-    <div class="artwork">
-      <img src="images/art8.jpg" alt="Exclusive handcrafted artwork">
-      <p>Artwork VIII · 24k Gold Leaf</p>
-    </div>
+<!-- ART 8 -->
+<div class="artwork">
+<a href="#img8"><img src="images/art8.jpg"></a>
+<h3>Art 8</h3>
+<p>Handmade contemporary artwork with a balanced composition and subtle 24k gold leaf accents.</p>
+<div class="price"><span class="old">35 €</span><span class="new">25 €</span></div>
+</div>
 
-  </main>
+</main>
 
-  <footer>
-    © 2025 GfL Art · All rights reserved
-  </footer>
+<div class="contact">
+<a href="https://wa.me/00353830888822" target="_blank">Contact via WhatsApp</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="img1" class="lightbox"><a href="#"><img src="images/art1.jpg"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="images/art2.jpg"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="images/art3.jpg"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="images/art4.jpg"></a></div>
+<div id="img5" class="lightbox"><a href="#"><img src="images/art5.jpg"></a></div>
+<div id="img6" class="lightbox"><a href="#"><img src="images/art6.jpg"></a></div>
+<div id="img7" class="lightbox"><a href="#"><img src="images/art7.jpg"></a></div>
+<div id="img8" class="lightbox"><a href="#"><img src="images/art8.jpg"></a></div>
+
+<footer>
+© 2025 GfL Art · All rights reserved
+</footer>
 
 </body>
 </html>
